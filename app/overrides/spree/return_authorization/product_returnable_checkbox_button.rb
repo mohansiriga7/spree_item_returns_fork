@@ -6,7 +6,7 @@ Deface::Override.new(
           <%= f.field_container :returnable, class: ['form-group'] do %>
             <%= f.label :returnable, Spree.t(:returnable) %>
             <%= f.error_message_on :returnable %>
-            <%= f.check_box :returnable, class: 'form-control' %>
+            <%= f.check_box :returnable, class: 'form-control' , disabled: (cannot? :update, @product.returnable) %>
           <% end %>
         </div>"
 )
