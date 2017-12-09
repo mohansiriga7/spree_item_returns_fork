@@ -1,4 +1,4 @@
-class AddReturnTimeToProducts < ActiveRecord::Migration
+class AddReturnTimeToProducts < ActiveRecord::Migration[4.2]
   def change
     add_column :spree_products, :return_time, :integer, default: 0, null: false
 
